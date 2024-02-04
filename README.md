@@ -2,6 +2,8 @@
 
 ![preview](assets/preview.png)
 
+![settings-preview](assets/settings-preview.png)
+
 This is simple and modern [Gradio](https://gradio.app) webui for LLM models GGML format (.bin) based on LLaMA.
 
 ## How to install
