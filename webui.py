@@ -220,9 +220,10 @@ with gr.Blocks(theme="theme-repo/STONE_Theme", title="TensorLM", css="style.css"
 
 
 demo.launch(
-    inbrowser=True,
+    inbrowser=False,
     server_port=5555,
     debug=False,
     quiet=True,
     favicon_path="assets/favicon.png",
+    share=True,
 )
