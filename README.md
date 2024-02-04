@@ -9,7 +9,10 @@
 ## 2. Install git from installer
 
 
-## 3. Go to folder TensorLM
+## 3. Start "download.start.bat" file
+
+
+## Go to folder TensorLM
 
 
 ## 4. Go to folder models

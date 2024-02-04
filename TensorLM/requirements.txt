@@ -1,7 +1,0 @@
-gradio==4.1.0
-transformers
-torch==2.0.1
-llama-cpp-python==0.1.73
-huggingface_hub
-python-dotenv
-art==6.1
