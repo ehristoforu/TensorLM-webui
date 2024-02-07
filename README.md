@@ -1,4 +1,4 @@
-![](https://img.shields.io/github/license/{ehristoforu}/{TensorLM-webui}.svg)
+![](https://img.shields.io/github/license/ehristoforu/TensorLM-webui.svg)
 
 # TensorLM - webui for LLM models
 
