@@ -1,3 +1,5 @@
+![](https://img.shields.io/github/license/{username}/{repo-name}.svg)
+
 # TensorLM - webui for LLM models
 
 ![preview](assets/preview.png)
