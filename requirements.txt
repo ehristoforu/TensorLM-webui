@@ -1,6 +1,6 @@
 gradio==4.1.0
 transformers
-torch==2.0.1
+torch==2.1.0
 llama-cpp-python==0.1.73
 huggingface_hub
 python-dotenv
