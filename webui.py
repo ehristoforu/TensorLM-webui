@@ -28,7 +28,7 @@ def load_model(path, n_ctx, n_gpu_layers, n_threads, verbose, f16_kv, logits_all
     try:
         global llm
         llm = Llama(
-            model_path=f"{dir}\models\{path}",
+            model_path=f"{dir}/models/{path}",
             n_ctx=n_ctx,
             n_gpu_layers=n_gpu_layers,
             n_threads=n_threads,
@@ -52,7 +52,7 @@ def load_model(path, n_ctx, n_gpu_layers, n_threads, verbose, f16_kv, logits_all
         return ""
 
 def list_models(name):
-    return os.listdir(f"{dir}\models")
+    return os.listdir(f"{dir}models")
 
 def render_md(text):
     return f"{text}"
@@ -115,7 +115,7 @@ chatbot = gr.Chatbot(show_label=False, layout="panel", show_copy_button=True, he
 
 with gr.Blocks(theme="theme-repo/STONE_Theme", title="TensorLM", css="style.css") as demo:
     with gr.Row():
-        model = gr.Dropdown(label="Model (only based on Llama in GGML format (.bin))", choices=os.listdir(f"{dir}\models"), value="None", interactive=True, allow_custom_value=False, scale=50)
+        model = gr.Dropdown(label="Model (only based on Llama in GGML format (.bin))", choices=os.listdir(f"{dir}/models"), value="None", interactive=True, allow_custom_value=False, scale=50)
         #refresh_model = gr.Button(value="Load model", interactive=True, scale=1)
     with gr.Row():
         with gr.Tab("💬"):
