@@ -1,4 +1,4 @@
 tlm_version = 3
-theme = theme-repo/STONE_Theme
+theme = theme-repo/STONE_Theme # | theme-repo/MONO_Theme | theme-repo/GLASS_Theme 
 echo = True
 footer = True

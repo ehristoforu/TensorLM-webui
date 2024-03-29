@@ -1,13 +1,15 @@
-from art import *
 import time
 import subprocess
 import os
 
-print(text2art('''TensorLM''', font="small"))
-print("Our license: https://www.apache.org/licenses/LICENSE-2.0.txt")
-print("")
+from modules.load_configure import *
 
-time.sleep(5)
+if echo =="True":
+    from art import *
+    print(text2art('''TensorLM''', font="small"))
+    print("Our license: https://www.apache.org/licenses/LICENSE-2.0.txt")
+    print("")
+    time.sleep(3)
 
 dir = os.getcwd()
 
