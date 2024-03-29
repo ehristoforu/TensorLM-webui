@@ -10,7 +10,7 @@ This is simple and modern [Gradio](https://gradio.app) webui for LLM models GGML
 
 ## Fast use
 
-You can use this webui in cloud service Colab: <a target="_blank" href="https://colab.research.google.com/github/ehristoforu/TensorLM-webui/blob/colab/TensorLM_colab.ipynb">
+You can use this webui in cloud service Colab: <a target="_blank" href="https://colab.research.google.com/github/ehristoforu/TensorLM-webui/blob/dev/assets/TensorLM_colab.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
