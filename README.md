@@ -1,12 +1,16 @@
-![](https://img.shields.io/github/license/ehristoforu/TensorLM-webui.svg) ![](https://img.shields.io/github/downloads/ehristoforu/TensorLM-webui/total.svg) ![](https://img.shields.io/github/stars/ehristoforu/TensorLM-webui.svg)
-
 # TensorLM - webui for LLM models
 
 ![preview](assets/preview.png)
 
-![settings-preview](assets/settings-preview.png)
+*This is Fooocus from the world of Stable Difusion in the world of Text Generation, the same ease of use and the same convenience.*
 
 This is simple and modern [Gradio](https://gradio.app) webui for LLM models GGML format (.bin) based on LLaMA.
+
+---
+Navigation: \
+[**Installing**](#installing) \
+[**Args**](#args)
+---
 
 ## Fast use
 
@@ -14,9 +18,50 @@ You can use this webui in cloud service Colab: <a target="_blank" href="https://
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-## How to install
+## Features
 
-It is very simple and easy. Go to releases on Github project page and download latest portable version.
+- Simple to use
+- Comfy to work
+- Not demanding on resources
+- Beautiful and pleasant interface
 
-Next, open README.md in release and follow the instructions.
+## Installing
 
+### In Windows
+
+[**>>> Portable one-click packege <<<**]()
+
+Step-by-step installation:
+  1. Install [Python 3.10.6](https://www.python.org/ftp/python/3.10.6/python-3.10.6-amd64.exe) and [Git](https://github.com/git-for-windows/git/releases/download/v2.44.0.windows.1/Git-2.44.0-64-bit.exe)
+  2. Run ```git clone https://github.com/ehristoforu/TensorLM-webui.git```
+  3. Run ```cd TensorLM-webui```
+  4. Run ```update_mode.bat``` && enter 1 and 2
+  5. Run ```start.bat```
+
+### In MacOS
+
+Step-by-step installation:
+  1. Install [Python 3.10.6](https://www.python.org/ftp/python/3.10.6/python-3.10.6-macos11.pkg) and [Git](https://git-scm.com/download/mac)
+  2. Run ```git clone https://github.com/ehristoforu/TensorLM-webui.git```
+  3. Run ```cd TensorLM-webui```
+  4. Run ```python pip install -r requirements.txt```
+  5. Run ```python webui.py```
+
+### Linux
+
+Step-by-step installation:
+  1. Install [Python 3.10.6](https://www.python.org/downloads/release/python-3106/) and [Git](https://git-scm.com/download/linux)
+  2. Run ```git clone https://github.com/ehristoforu/TensorLM-webui.git```
+  3. Run ```cd TensorLM-webui```
+  4. Run ```python pip install -r requirements.txt```
+  5. Run ```python webui.py```
+
+## Args
+
+*To use args*:
+  - In Windows: edit start.bat with Notepad and edit line with ```python webui.py``` to ```python webui.py [Your args]```, for ex. ```python webui.py --inbrowser```
+  - In MacOS & Linux: run ```python webui.py``` with args - ```python webui.py {Your args}```, for ex. ```python webui.py --inbrowser```
+
+### Args list
+
+`--inbrowser --share --lowvram --debug --quiet`
