@@ -122,8 +122,8 @@ with gr.Blocks(theme=theme, title=f"TensorLM v{tlm_version}", css="style.css") a
                         rope_freq_scale = gr.Slider(label="Rope freq scale", minimum=0.1, maximum=3.0, value=1.0, step=0.1)
 
     with gr.Row():
-        gr.Markdown("""
-        <center><a href="https://gradio.app">gradio 4.1.0</a> | <a href="https://github.com/ggerganov/llama.cpp">llama.cpp</a> | <a href="https://python.org">python</a> | <a href="https://huggingface.co/TheBloke?search_models=GGML">Suggested models</a></center>
+        gr.Markdown(f"""
+        <center><a href="https://github.com/ehristoforu/TensorLM-webui"v{tlm_version}></a><a href="https://gradio.app">gradio 4.1.0</a> | <a href="https://github.com/ggerganov/llama.cpp">llama.cpp</a> | <a href="https://python.org">python</a> | <a href="https://huggingface.co/TheBloke?search_models=GGML">Suggested models</a></center>
         """, visible=footer_vis)    
     
     render_markdown.click(
