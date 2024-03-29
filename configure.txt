@@ -1,4 +1,0 @@
-tlm_version = 3
-theme = theme-repo/STONE_Theme
-echo = True
-footer = True
