@@ -47,7 +47,7 @@ Step-by-step installation:
   4. Run ```python pip install -r requirements.txt```
   5. Run ```python webui.py```
 
-### Linux
+### In Linux
 
 Step-by-step installation:
   1. Install [Python 3.10.6](https://www.python.org/downloads/release/python-3106/) and [Git](https://git-scm.com/download/linux)
