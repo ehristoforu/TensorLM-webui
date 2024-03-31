@@ -29,7 +29,7 @@ You can use this webui in cloud service Colab: <a target="_blank" href="https://
 
 ### In Windows
 
-[**>>> Portable one-click packege <<<**]()
+[**>>> Portable one-click packege <<<**](https://github.com/ehristoforu/TensorLM-webui/releases/download/latest/latest_TensorLM_portable_win64.7z)
 
 Step-by-step installation:
   1. Install [Python 3.10.6](https://www.python.org/ftp/python/3.10.6/python-3.10.6-amd64.exe) and [Git](https://github.com/git-for-windows/git/releases/download/v2.44.0.windows.1/Git-2.44.0-64-bit.exe)
