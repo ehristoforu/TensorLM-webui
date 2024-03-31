@@ -4,12 +4,8 @@ import os
 
 from modules.load_configure import *
 
-if echo =="True":
-    from art import *
-    print(text2art('''TensorLM''', font="small"))
-    print("Our license: https://www.apache.org/licenses/LICENSE-2.0.txt")
-    print("")
-    time.sleep(3)
+if echo == "True":
+    from modules.echo import *
 
 dir = os.getcwd()
 

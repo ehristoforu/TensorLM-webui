@@ -7,13 +7,11 @@
     text-align: center;
     margin: 0 auto;
 }
-#generate_button {
-    color: white;
-    border-color: #007bff;
-    background: #007bff;
-    width: 200px;
-    height: 50px;
-}
 footer {
-    visibility: hidden
+    visibility: hidden; 
+}
+
+.custom-footer {
+    color:aliceblue;
+    size: 12px;
 }

@@ -3,11 +3,7 @@ from modules.load_configure import *
 import time
 
 if echo == "True":
-    from art import *
-    print(text2art('''TensorLM''', font="small"))
-    print("Our license: https://www.apache.org/licenses/LICENSE-2.0.txt")
-    time.sleep(3)
-    print(" ")
+    from modules.echo import *
 
 
 import os
@@ -44,7 +40,7 @@ If a question does not make any sense, or is not factually coherent, explain why
 '''
 
     
-chatbot = gr.Chatbot(show_label=False, layout="panel", show_copy_button=True, height=500, min_width=180)
+chatbot = gr.Chatbot(show_label=False, layout=chat_style, show_copy_button=True, height=500, min_width=180)
 
 with gr.Blocks(theme=theme, title=f"TensorLM v{tlm_version}", css="style.css") as webui:
     with gr.Row():
@@ -123,8 +119,8 @@ with gr.Blocks(theme=theme, title=f"TensorLM v{tlm_version}", css="style.css") a
 
     with gr.Row():
         gr.Markdown(f"""
-        <center><a href="https://github.com/ehristoforu/TensorLM-webui"v{tlm_version}></a><a href="https://gradio.app">gradio 4.1.0</a> | <a href="https://github.com/ggerganov/llama.cpp">llama.cpp</a> | <a href="https://python.org">python</a> | <a href="https://huggingface.co/TheBloke?search_models=GGML">Suggested models</a></center>
-        """, visible=footer_vis)    
+        <center><a href="https://github.com/ehristoforu/TensorLM-webui">v{tlm_version}</a> | <a href="/?view=api">API</a> | <a href="https://gradio.app">gradio 4.1.0</a> | <a href="https://github.com/ggerganov/llama.cpp">llama.cpp</a> | <a href="https://python.org">python</a> | <a href="https://huggingface.co/TheBloke?search_models=GGML">Suggested models</a></center>
+         """, visible=footer_vis)    
     
     render_markdown.click(
         fn=render_md,
@@ -157,4 +153,6 @@ webui.launch(
     debug=debug_arg,
     quiet=quiet_arg,
     favicon_path="assets/favicon.png",
+    show_api=show_api,
+    share_server_protocol=share_server_protocol,
 )
