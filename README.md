@@ -56,6 +56,13 @@ Step-by-step installation:
   4. Run ```python pip install -r requirements.txt```
   5. Run ```python webui.py```
 
+## Presets
+
+In this app there is 23 default presets.
+*Thanks, [@mustvlad](https://github.com/mustvlad/ChatGPT-System-Prompts) for system prompts!*
+
+You can create your custom presets, instruction in ```presets``` folder (it is .md-file).
+
 ## Args
 
 *To use args*:
@@ -65,3 +72,14 @@ Step-by-step installation:
 ### Args list
 
 `--inbrowser --share --lowvram --debug --quiet`
+
+## Citation
+```bibtex
+    @software{ehristoforu_TensorLM-webui_2024,
+        author = {ehristoforu},
+        month = apr,
+        title = {{TensorLM-webui}},
+        url = {https://github.com/ehristoforu/TensorLM-webui},
+        year = {2024}
+    }
+```
