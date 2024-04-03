@@ -9,6 +9,7 @@ This is simple and modern [Gradio](https://gradio.app) webui for LLM models GGML
 ---
 Navigation: \
 [**Installing**](#installing) \
+[**Presets**](#presets) \
 [**Args**](#args)
 ---
 
@@ -58,7 +59,7 @@ Step-by-step installation:
 
 ## Presets
 
-In this app there is 23 default presets.
+In this app there is 23 default presets. \
 *Thanks, [@mustvlad](https://github.com/mustvlad/ChatGPT-System-Prompts) for system prompts!*
 
 You can create your custom presets, instruction in ```presets``` folder (it is .md-file).
