@@ -7,9 +7,12 @@ import random
 from huggingface_hub import hf_hub_download  
 import time
 
+from modules.load_presets import load_presets_value
+
 def generate_text(message, history, system_prompt, preset, temperature, max_tokens, top_p, top_k, repeat_penalty):
+    global_sys_prompt = load_presets_value(preset) + " " + system_prompt
     temp = ""
-    input_prompt = f"[INST] <<SYS>>\nYou are {preset}. {system_prompt}.\n<</SYS>>\n\n "
+    input_prompt = f"[INST] <<SYS>>\n{global_sys_prompt}.\n<</SYS>>\n\n "
     for interaction in history:
         input_prompt = input_prompt + str(interaction[0]) + " [/INST] " + str(interaction[1]) + " </s><s> [INST] "
 

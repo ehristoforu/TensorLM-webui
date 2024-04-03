@@ -19,6 +19,7 @@ from modules.load_model import load_model
 from modules.inference import generate_text
 from modules.model_list import list_models
 from modules.render_markdown import render_md
+from modules.load_presets import load_presets_names, load_presets_value
 from modules.arg_parser import *
 
 #from blip.blip_engine import blip_run
@@ -31,13 +32,6 @@ else:
     footer_vis = False
 
 history = []
-
-'''
-system_message = """
-You are a helpful, respectful and honest assistant. Always answer as helpfully as possible, while being safe.  Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.
-If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.
-"""
-'''
 
     
 chatbot = gr.Chatbot(show_label=False, layout=chat_style, show_copy_button=True, height=500, min_width=180)
@@ -57,7 +51,7 @@ with gr.Blocks(theme=theme, title=f"TensorLM v{tlm_version}", css="style.css") a
                     top_k = gr.Slider(label="Top K", minimum=10.00, maximum=100.00, value=40.00, step=0.01, interactive=True)
                     repeat_penalty = gr.Slider(label="Repeat penalty", minimum=0.01, maximum=2.00, value=1.10, step=0.01, interactive=True)
                 with gr.Tab("Instructions"):
-                    preset = gr.Dropdown(label="Prompt preset", choices=["AI-assistant", "Historical Expert", "Math Tutor", "Python Tutor", "Language Learning Coach", "Philosopher", "Poet"], value="AI-assistant", interactive=True, allow_custom_value=False)
+                    preset = gr.Dropdown(label="Prompt preset", choices=load_presets_names(), value=load_presets_names()[1], interactive=True, allow_custom_value=False)
                     system_prompt = gr.Textbox(label="Custom system prompt", max_lines=4, lines=3, interactive=True)
 
             with gr.Row():

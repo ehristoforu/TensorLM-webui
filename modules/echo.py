@@ -7,7 +7,7 @@ from modules.load_configure import *
 
 print("")
 print(text2art('''TensorLM''', font="small"))
-print("Our license: https://www.apache.org/licenses/LICENSE-2.0.txt")
+print("Our license: https://www.gnu.org/licenses/gpl-3.0.txt")
 time.sleep(2.5)
 print(" ")
 
