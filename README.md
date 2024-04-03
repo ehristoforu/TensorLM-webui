@@ -74,6 +74,8 @@ You can create your custom presets, instruction in ```presets``` folder (it is .
 
 `--inbrowser --share --lowvram --debug --quiet`
 
+### ![](https://img.shields.io/github/license/ehristoforu/TensorLM-webui.svg)
+
 ## Citation
 ```bibtex
     @software{ehristoforu_TensorLM-webui_2024,
