@@ -1,4 +1,4 @@
 @echo off
 
-python update.py
+python update_mode.py
 
