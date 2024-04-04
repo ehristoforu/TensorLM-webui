@@ -1,6 +1,8 @@
 import time
 import subprocess
 import os
+from update.update_app import update_app
+from update.update_pip_requirements import update_requirements
 
 from modules.load_configure import *
 
@@ -19,6 +21,6 @@ while True:
 
 
     if mode == 1:
-        subprocess.run([f"{dir}/update/update_app.bat"], shell=True)
+        update_app()
     elif mode == 2:
-        subprocess.run([f"{dir}/update/update_pip_requirements.bat"], shell=True)
+        update_requirements()
