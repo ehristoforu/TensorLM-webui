@@ -10,6 +10,7 @@ This is simple and modern [Gradio](https://gradio.app) webui for LLM models GGML
 Navigation: \
 [**Installing**](#installing) \
 [**Presets**](#presets) \
+[**Model downloading**](#model-downloading) \
 [**Args**](#args)
 ---
 
@@ -64,6 +65,10 @@ In this app there is 23 default presets. \
 
 You can create your custom presets, instruction in ```presets``` folder (it is .md-file).
 
+## Model downloading
+
+With this interface you don't need to scour the Internet looking for a compatible model; in the "Tabs" checkbox and in the "ModelGet" tab you can choose which model to download from our verified repository on HuggingFace.
+
 ## Args
 
 *To use args*:
@@ -73,6 +78,10 @@ You can create your custom presets, instruction in ```presets``` folder (it is .
 ### Args list
 
 `--inbrowser --share --lowvram --debug --quiet`
+
+## Forks
+
+While there are no forks 😔, perhaps you will be the first who can significantly improve this application!
 
 ## ![](https://img.shields.io/github/license/ehristoforu/TensorLM-webui.svg)
 
