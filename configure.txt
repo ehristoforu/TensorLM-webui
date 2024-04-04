@@ -1,0 +1,13 @@
+tlm_version = 3.0.0pre3
+
+theme = theme-repo/STONE_Theme # | theme-repo/STONE_Theme | theme-repo/MONO_Theme | theme-repo/GLASS_Theme 
+
+echo = True
+
+chat_style = panel # | panel | bubble
+
+footer = True
+
+show_api = True # | True | False
+
+share_server_protocol = https # | https | http

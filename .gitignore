@@ -1,4 +1,6 @@
 __pycache__
 *.bin
 /models/*
+/.cache/*
+/presets/user.json
 start.bat

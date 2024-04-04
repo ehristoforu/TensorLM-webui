@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - given-names: ehristoforu
+title: "TensorLM-webui"
+date-released: 2024-04-03
+url: "https://github.com/ehristoforu/TensorLM-webui"
