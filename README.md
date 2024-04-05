@@ -1,4 +1,4 @@
-# TensorLM - webui for LLM models
+# **TensorLM** - webui for LLM models
 
 ![preview](assets/preview.png)
 
