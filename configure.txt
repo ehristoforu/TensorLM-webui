@@ -1,4 +1,4 @@
-tlm_version = 3.0.0pre3
+tlm_version = 3.0.0
 
 theme = theme-repo/STONE_Theme # | theme-repo/STONE_Theme | theme-repo/MONO_Theme | theme-repo/GLASS_Theme 
 
