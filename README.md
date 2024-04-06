@@ -6,6 +6,8 @@
 
 This is simple and modern [Gradio](https://gradio.app) webui for LLM models GGML format (.bin) based on LLaMA.
 
+We can try this app online in very slow demo: ![https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-md-dark.svg](https://ehristoforu-tensorlm-webui-for-hf.hf.space)
+
 ---
 Navigation: \
 [**Installing**](#installing) \
