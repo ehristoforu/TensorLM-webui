@@ -43,6 +43,7 @@ Step-by-step installation:
   3. Run ```cd TensorLM-webui```
   4. Run ```update_mode.bat``` && enter 1 and 2
   5. Run ```start.bat```
+Or download exe installer from [this repo](https://github.com/stableuser/TLM_Installer).
 
 ### In MacOS
 
