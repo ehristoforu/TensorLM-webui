@@ -6,6 +6,10 @@
 
 This is simple and modern [Gradio](https://gradio.app) webui for LLM models GGML format (.bin) based on LLaMA.
 
+We can try this app online in very slow demo: <a target="_blank" href="https://huggingface.co/spaces/ehristoforu/TensorLM-webui-for-HF">
+  <img src="https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-md-dark.svg" alt="Open In Spaces"/>
+</a>
+
 ---
 Navigation: \
 [**Installing**](#installing) \
@@ -39,6 +43,8 @@ Step-by-step installation:
   3. Run ```cd TensorLM-webui```
   4. Run ```update_mode.bat``` && enter 1 and 2
   5. Run ```start.bat```
+     
+Or download exe installer from [this repo](https://github.com/stableuser/TLM_Installer)
 
 ### In MacOS
 
