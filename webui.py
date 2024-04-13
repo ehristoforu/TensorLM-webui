@@ -16,6 +16,9 @@ from huggingface_hub import hf_hub_download
 
 from modules.download_model import download_model
 from modules.inference import load_model, generate_text
+from modules.openai_api import chat_openai
+from modules.process import process_to_run
+from modules.change import mode_change
 from modules.model_list import list_models
 from modules.render_markdown import render_md
 from modules.load_presets import load_presets_names, load_presets_value
@@ -40,6 +43,7 @@ with gr.Blocks(theme=theme, title=f"TensorLM v{tlm_version}", css="style.css") a
     with gr.Row():
         with gr.Row(render=False, variant="panel") as sliders:       
             with gr.Tab("Parameters"):
+                mode = gr.Radio(label="Mode", choices=["Local", "OpenAI"], value="Local", interactive=True)
                 max_tokens = gr.Slider(label="Max new tokens", minimum=256, maximum=4056, value=512, step=8, interactive=True)
                 temperature = gr.Slider(label="Temperature", minimum=0.01, maximum=2.00, value=0.15, step=0.01, interactive=True)
                 top_p = gr.Slider(label="Top P", minimum=0.01, maximum=2.00, value=0.10, step=0.01, interactive=True)
@@ -72,13 +76,13 @@ with gr.Blocks(theme=theme, title=f"TensorLM v{tlm_version}", css="style.css") a
         with gr.Column(scale=2):
             with gr.Row():
                 gr.ChatInterface(
-                    generate_text,
+                    process_to_run,
                     chatbot=chatbot,
                     retry_btn="🔄️",
                     submit_btn="📨",
                     undo_btn="↩️",
                     clear_btn="🗑️",
-                    additional_inputs=[system_prompt, preset, temperature, max_tokens, top_k, top_k, repeat_penalty, model, n_ctx, n_gpu_layers, n_threads, verbose, f16_kv, logits_all, vocab_only, use_mmap, use_mlock, n_batch, last_n_tokens_size, low_vram, rope_freq_base, rope_freq_scale]
+                    additional_inputs=[mode, system_prompt, preset, temperature, max_tokens, top_p, top_k, repeat_penalty, model, n_ctx, n_gpu_layers, n_threads, verbose, f16_kv, logits_all, vocab_only, use_mmap, use_mlock, n_batch, last_n_tokens_size, low_vram, rope_freq_base, rope_freq_scale]
                 )
             with gr.Row():
                 options_change = gr.Checkbox(label="Options", value=False, interactive=True)
@@ -119,7 +123,13 @@ with gr.Blocks(theme=theme, title=f"TensorLM v{tlm_version}", css="style.css") a
             with gr.Column(scale=1):
                 sliders.render()
      
-    
+    mode.change(
+        fn=mode_change,
+        inputs=mode,
+        outputs=[top_k, repeat_penalty, model, reload_model],
+        queue=False,
+        api_name=False,
+    )
     render_markdown.click(
         fn=render_md,
         inputs=notebook,
