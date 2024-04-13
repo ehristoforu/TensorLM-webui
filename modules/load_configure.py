@@ -8,6 +8,9 @@ load_dotenv("configure.txt")
 global tlm_version
 tlm_version = os.getenv("tlm_version")
 
+global openai_key
+openai_key = os.getenv("openai_key")
+
 global echo
 echo = os.getenv("echo")
 

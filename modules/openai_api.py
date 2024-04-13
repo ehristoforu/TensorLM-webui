@@ -4,7 +4,7 @@ import os
 import time
 import random
 
-from modules.load_configure import load_configure
+from modules.load_configure import *
 from modules.load_presets import load_presets_value
 
 client = OpenAI(api_key=openai_key, base_url="https://api.chatanywhere.tech/v1")

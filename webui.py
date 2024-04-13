@@ -15,9 +15,9 @@ import random
 from huggingface_hub import hf_hub_download  
 
 from modules.download_model import download_model
-from modules.inference import load_model, generate_text
+from modules.inference import generate_text
+from modules.load_model import load_model
 from modules.openai_api import chat_openai
-from modules.process import process_to_run
 from modules.change import mode_change
 from modules.model_list import list_models
 from modules.render_markdown import render_md
@@ -76,7 +76,7 @@ with gr.Blocks(theme=theme, title=f"TensorLM v{tlm_version}", css="style.css") a
         with gr.Column(scale=2):
             with gr.Row():
                 gr.ChatInterface(
-                    process_to_run,
+                    generate_text,
                     chatbot=chatbot,
                     retry_btn="🔄️",
                     submit_btn="📨",
