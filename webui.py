@@ -46,7 +46,7 @@ with gr.Blocks(theme=theme, title=f"TensorLM v{tlm_version}", css="style.css") a
                 mode = gr.Radio(label="Mode", choices=["Local", "OpenAI", "MistralAI"], value="Local", interactive=True)
                 openai_endpoint = gr.Dropdown(label="OpenAI Endpoint", choices=["api.chatanywhere.tech/v1", "api.openai.com/v1", "api.naga.ac/v1", "chatgpt-api.shn.hk/v1"], value="api.chatanywhere.tech/v1", allow_custom_value=True, interactive=True, visible=False)
                 openai_model = gr.Dropdown(label="OpenAI Model", choices=["gpt-3.5-turbo", "gpt-3.5-turbo-16k", "gpt-3.5-turbo-0301", "gpt-4", "gpt-4-0314", "gpt-4-0613"], value="gpt-3.5-turbo", allow_custom_value=True, interactive=True, visible=False)
-                mistralai_model = gr.Dropdown(label="OpenAI Model", choices=["mixtral-8x7b", "mistral-7b"], value="mixtral-8x7b", allow_custom_value=False, interactive=True, visible=False)
+                mistralai_model = gr.Dropdown(label="MistralAI Model", choices=["mixtral-8x7b", "mistral-7b"], value="mixtral-8x7b", allow_custom_value=False, interactive=True, visible=False)
                 max_tokens = gr.Slider(label="Max new tokens", minimum=256, maximum=4056, value=512, step=8, interactive=True)
                 temperature = gr.Slider(label="Temperature", minimum=0.01, maximum=2.00, value=0.15, step=0.01, interactive=True)
                 top_p = gr.Slider(label="Top P", minimum=0.01, maximum=2.00, value=0.10, step=0.01, interactive=True)
