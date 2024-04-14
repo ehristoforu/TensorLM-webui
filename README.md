@@ -4,7 +4,7 @@
 
 *This is Fooocus from the world of Stable Difusion in the world of Text Generation, the same ease of use and the same convenience.*
 
-This is simple and modern [Gradio](https://gradio.app) webui for LLM models GGML format (.bin) based on LLaMA.
+This is simple and modern [Gradio](https://gradio.app) webui for LLM models GGML format (.bin) or GGUF format (.gguf) based on LLaMA.
 
 We can try this app online in very slow demo of 3.0.0 version: <a target="_blank" href="https://huggingface.co/spaces/ehristoforu/TensorLM-webui-for-HF">
   <img src="https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-md-dark.svg" alt="Open In Spaces"/>
