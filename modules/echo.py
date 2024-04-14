@@ -32,3 +32,5 @@ for _ in range(3):
 
 print()
 print('Logical CPUs:', psutil.cpu_count())
+
+print("")
