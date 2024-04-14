@@ -1,4 +1,6 @@
-tlm_version = 3.0.0
+tlm_version = 3.1.0ss
+
+openai_key = sk-U0qow8cRDvsABrKV10YbE3drxaglKMll6GCrIHId5OJeoZKW # this is test free key that can't work, go to https://api.chatanywhere.org/v1/oauth/free/github/render for get your key for free
 
 theme = theme-repo/STONE_Theme # | theme-repo/STONE_Theme | theme-repo/MONO_Theme | theme-repo/GLASS_Theme 
 
