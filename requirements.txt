@@ -4,6 +4,7 @@ transformers==4.31.0
 torch==2.1.0
 llama-cpp-python==0.2.61
 huggingface_hub==0.19.4
+openai==1.16.2
 python-dotenv==1.0.0
 art==6.1
 psutil==5.9.8
