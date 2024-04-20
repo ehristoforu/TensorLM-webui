@@ -53,6 +53,7 @@ with gr.Blocks(theme=theme, title=f"TensorLM v{tlm_version}", css="style.css") a
                 top_k = gr.Slider(label="Top K", minimum=10.00, maximum=100.00, value=40.00, step=0.01, interactive=True)
                 repeat_penalty = gr.Slider(label="Repeat penalty", minimum=0.01, maximum=2.00, value=1.10, step=0.01, interactive=True)
             with gr.Tab("Instructions"):
+                global_preset = gr.Radio("Global preset", choices=["None", "AutoGPT", "DAN", "Evil-Bot", "Jailbreak"], value="None", interactive=True)
                 preset = gr.Radio(label="Prompt preset", choices=load_presets_names(), value=load_presets_names()[1], interactive=True)
                 system_prompt = gr.Textbox(label="Custom system prompt", max_lines=4, lines=3, interactive=True)
             with gr.Tab("Model"):
@@ -85,7 +86,7 @@ with gr.Blocks(theme=theme, title=f"TensorLM v{tlm_version}", css="style.css") a
                     submit_btn="📨",
                     undo_btn="↩️",
                     clear_btn="🗑️",
-                    additional_inputs=[mode, openai_endpoint, openai_model, mistralai_model, system_prompt, preset, temperature, max_tokens, top_p, top_k, repeat_penalty, model, n_ctx, n_gpu_layers, n_threads, verbose, f16_kv, logits_all, vocab_only, use_mmap, use_mlock, n_batch, last_n_tokens_size, low_vram, rope_freq_base, rope_freq_scale]
+                    additional_inputs=[mode, openai_endpoint, openai_model, mistralai_model, system_prompt, global_preset, preset, temperature, max_tokens, top_p, top_k, repeat_penalty, model, n_ctx, n_gpu_layers, n_threads, verbose, f16_kv, logits_all, vocab_only, use_mmap, use_mlock, n_batch, last_n_tokens_size, low_vram, rope_freq_base, rope_freq_scale]
                 )
             with gr.Row():
                 options_change = gr.Checkbox(label="Options", value=False, interactive=True)

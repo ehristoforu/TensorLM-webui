@@ -11,8 +11,8 @@ from modules.load_presets import load_presets_value
 from modules.load_configure import *
 from modules.load_model import *
 
-def generate_text(message, history, mode, openai_endpoint, openai_model, mistralai_model, system_prompt, preset, temperature, max_tokens, top_p, top_k, repeat_penalty, model, n_ctx, n_gpu_layers, n_threads, verbose, f16_kv, logits_all, vocab_only, use_mmap, use_mlock, n_batch, last_n_tokens_size, low_vram, rope_freq_base, rope_freq_scale):
-    global_sys_prompt = load_presets_value(preset) + " " + system_prompt
+def generate_text(message, history, mode, openai_endpoint, openai_model, mistralai_model, system_prompt, global_preset, preset, temperature, max_tokens, top_p, top_k, repeat_penalty, model, n_ctx, n_gpu_layers, n_threads, verbose, f16_kv, logits_all, vocab_only, use_mmap, use_mlock, n_batch, last_n_tokens_size, low_vram, rope_freq_base, rope_freq_scale):
+    global_sys_prompt = load_presets_value(global_preset) + " " + load_presets_value(preset) + " " + system_prompt
     
     if mode == "Local":
         dir = os.getcwd()
